@@ -1,0 +1,7 @@
+[functions.fetch-regional-data]
+verify_jwt = false
+entrypoint = "./functions/fetch-regional-data/index.ts"
+
+[functions.gemini-chat]
+verify_jwt = false
+entrypoint = "./functions/gemini-chat/index.ts"
