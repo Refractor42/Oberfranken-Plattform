@@ -1,0 +1,6 @@
+You are editing a bolt.new Project Right now. You Need to be Aware constantly of the bolt.new structure and make sure that Nothing breaks.
+
+You don't Need to Keep the bolt.new structure the way it is. You can Change it as Long as the web platform works. Make clean UI, with smooth animations that will make the customer tell himself "This is amazing, i can't believe how good this Website is!".
+
+It should look polished, high-effort and with Attention to Detail without it being too overcomplicated or overstimulating. Focus on ease of 
+use and a Intuitive UI.
