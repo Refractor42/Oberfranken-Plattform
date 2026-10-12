@@ -972,12 +972,19 @@ function App() {
           )}
         </section>
 
-        <section id="signale" className="mt-20 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="blue-panel relative overflow-hidden p-7 sm:p-10"><div className="blue-panel-orbit orbit-one" /><div className="blue-panel-orbit orbit-two" /><div className="relative z-10"><div className="flex items-center justify-between"><p className="section-kicker light">Die Region im Blick</p><Compass className="text-white/70" size={25} /></div><h2 className="mt-5 max-w-lg font-display text-4xl font-medium leading-tight tracking-[-0.04em] text-white sm:text-5xl">Ein Netzwerk, das <span className="text-[#a9c9ff]">sichtbar</span> macht.</h2><p className="mt-5 max-w-md text-sm leading-6 text-blue-100/75">Oberfranken ist voller guter Ideen. Wir bündeln sie, damit aus vielen einzelnen Signalen eine gemeinsame Richtung entsteht.</p><div className="mt-10 flex items-center gap-8"><div><strong className="font-display text-4xl font-medium text-white">112</strong><p className="mt-1 text-xs uppercase tracking-wider text-blue-100/60">aktive Akteure</p></div><div className="h-12 w-px bg-white/15" /><div><strong className="font-display text-4xl font-medium text-white">34</strong><p className="mt-1 text-xs uppercase tracking-wider text-blue-100/60">neue Signale</p></div></div></div></div>
-          <div className="ai-panel p-7 sm:p-10 bg-[#ec4b45] text-white"><div className="flex items-center justify-between"><div className="ai-label"><span className="ai-spark"><Sparkles size={14} /></span> Hansla — dein Guide</div><Bot size={23} className="text-white" /></div><h2 className="mt-6 font-display text-3xl font-medium leading-tight tracking-[-0.04em] text-white">Was möchtest du<br /><span className="text-white">erleben?</span></h2><p className="mt-4 text-sm leading-6 text-white/80">Frag Hansla — deinen persönlichen Assistenten für Oberfranken. Er kennt Orte, Events und gibt dir passende Tipps.</p><div className="location-context"><MapPin size={14} className="text-white" /><span>{gpsCoords ? 'Standort aktiv — kuratiert für' : locationStatus === 'loading' ? 'Dein Standort wird erkannt …' : 'Automatisch kuratiert für'} <strong>{detectedCity}</strong></span><span className={`location-status ${gpsCoords ? 'ready' : locationStatus}`} style={{background: 'white'}} /></div><button className="ai-ask-button mt-8" style={{background: 'white', color: '#ec4b45', boxShadow: '0 9px 20px rgba(255,255,255,.18)'}} onClick={() => setAiOpen(true)}>Hansla fragen <ArrowUpRight size={16} /></button><div className="mt-6 flex flex-wrap gap-2"><span className="suggestion-chip" style={{border: '1px solid rgba(255,255,255,.3)', color: 'white', background: 'rgba(255,255,255,.1)'}} onClick={() => { setAiMessage('Was ist dieses Wochenende los?'); setAiOpen(true); }}>Wochenendideen</span><span className="suggestion-chip" style={{border: '1px solid rgba(255,255,255,.3)', color: 'white', background: 'rgba(255,255,255,.1)'}} onClick={() => { setAiMessage('Orte für Familien'); setAiOpen(true); }}>Familienorte</span></div></div>
+        <section id="ueber-uns" className="mt-20 relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1e3a5f] via-[#152238] to-[#0d1b2e] p-7 sm:p-10 lg:p-16">
+          <div className="blue-panel-orbit orbit-one" />
+          <div className="blue-panel-orbit orbit-two" />
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
+            <p className="section-kicker light">Für Oberfranken</p>
+            <h2 className="mt-4 font-display text-3xl font-medium leading-tight tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">
+              Eine digitale Bühne für regionale Inhalte — kuratiert von Menschen, erweitert durch Technologie.
+            </h2>
+            <button className="mt-10 secondary-button" style={{borderColor: 'rgba(255,255,255,.3)', color: 'white'}} onClick={() => setPartnerModalOpen(true)}>
+              Partner werden <Plus size={16} />
+            </button>
+          </div>
         </section>
-
-        <section id="ueber-uns" className="mt-20 flex flex-col justify-between gap-6 border-t border-slate-900/10 pt-7 sm:flex-row sm:items-center"><div><p className="section-kicker">Für Oberfranken</p><p className="mt-2 max-w-lg text-sm leading-6 text-slate-500">Eine digitale Bühne für regionale Inhalte — kuratiert von Menschen, erweitert durch Technologie.</p></div><button className="secondary-button w-fit" onClick={() => setPartnerModalOpen(true)}>Partner werden <Plus size={16} /></button></section>
 
         {/* Reviews Section */}
         <section id="bewertungen" className="mt-20" aria-labelledby="reviews-title">
