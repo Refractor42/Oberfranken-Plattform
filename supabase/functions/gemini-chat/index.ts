@@ -208,7 +208,7 @@ ${contextText}
 ${interestStr}
 ${locationStr}
 
-Beantworte die Frage des Nutzers basierend auf diesen Daten. Wenn die Daten nicht ausreichen, gib ehrlich an, dass du keine genauen Informationen hast, aber gib trotzdem eine hilfreiche Empfehlung. Erwähne konkrete Orte, Events und Wetter, wenn relevant. Halte die Antwort natürlich und angenehm (max. 4 Sätze).
+Beantworte die Frage des Nutzers. Nutze dafür sowohl die oben bereitgestellten Daten als auch dein eigenes Wissen über Oberfranken, Bayern und Deutschland. Gib konkrete, hilfreiche Empfehlungen mit Namen von Orten, Restaurants oder Events. Wenn du etwas nicht genau weißt, gib trotzdem eine bestmögliche Empfehlung oder einen nützlichen Tipp – sage niemals einfach „ich weiß nicht" oder „ich habe keine Informationen". Erwähne Wetter und Events, wenn relevant. Halte die Antwort natürlich und angenehm (max. 4 Sätze).
 
 Frage: ${message}`;
 
