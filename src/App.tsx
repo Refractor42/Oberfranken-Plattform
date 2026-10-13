@@ -83,7 +83,7 @@ const stories: Story[] = [
     time: '5 min',
     topic: 'Kultur',
     accent: 'coral',
-    image: 'https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&w=900',
+    image: 'https://www.bayreuth.de/wp-content/uploads/2019/08/Festspielhaus_BiB-27.08.2019-Ramona-Schirner_1200px.jpg',
   },
   {
     eyebrow: 'Natur · 05.10.2026',
@@ -93,7 +93,7 @@ const stories: Story[] = [
     time: '8 min',
     topic: 'Natur',
     accent: 'blue',
-    image: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=900',
+    image: 'https://imgs.search.brave.com/bUSVGeEnW-HwNtUGNHktYde6-N9qaqh3_xjI-xfdFXE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZWlz/ZW51bmRlc3Nlbi5k/ZS93b3JkcHJlc3Mv/d3AtY29udGVudC91/cGxvYWRzLzIwMjIv/MDgvS3JvbmFjaC5q/cGc',
   },
   {
     eyebrow: 'Wissen · 03.10.2026',
@@ -103,7 +103,7 @@ const stories: Story[] = [
     time: '6 min',
     topic: 'Wissen',
     accent: 'yellow',
-    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=900',
+    image: 'https://imgs.search.brave.com/WWERu_RM3tBMMx8JyqASamtGdKl9DSJowqxCBlhKoF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90b3Vy/aXNtdXMubnVlcm5i/ZXJnLmRlL2ZpbGVh/ZG1pbi9fcHJvY2Vz/c2VkXy8yLzQvY3Nt/X2NvYnVyZzFfOWY2/Njk2ZjZmZS5qcGc',
   },
 ];
 
@@ -1203,7 +1203,7 @@ function formatEventTime(value: string): string {
 }
 
 function StoryCard({ story, index, saved, onSave }: { story: Story; index: number; saved: boolean; onSave: () => void }) {
-  return <article className={`story-card ${index === 0 ? 'featured' : ''}`}><div className="story-image" style={{ backgroundImage: `url(${story.image})` }}><span className={`story-topic ${story.accent}`}>{story.topic}</span><button className={`save-button ${saved ? 'saved' : ''}`} onClick={onSave} aria-label="Geschichte speichern"><Heart size={17} fill={saved ? 'currentColor' : 'none'} /></button><div className="story-gradient" /><span className="story-location"><MapPin size={13} />{story.location}</span></div><div className="p-5 sm:p-6"><p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">{story.eyebrow}</p><h3 className="mt-3 font-display text-2xl font-medium leading-tight tracking-[-0.035em] text-[#152238]">{story.title}</h3><p className="mt-3 text-sm leading-6 text-slate-500">{story.description}</p><div className="mt-6 flex items-center justify-between"><span className="flex items-center gap-1.5 text-xs font-semibold text-slate-400"><Play size={12} fill="currentColor" /> {story.time} lesen</span><button className="read-button">Entdecken <ExternalLink size={14} /></button></div></div></article>;
+  return <article className={`story-card ${index === 0 ? 'featured' : ''}`}><div className="story-image" style={{ backgroundImage: `url(${story.image})` }}><span className={`story-topic ${story.accent}`}>{story.topic}</span><button className={`save-button ${saved ? 'saved' : ''}`} onClick={onSave} aria-label="Geschichte speichern"><Heart size={17} fill={saved ? 'currentColor' : 'none'} /></button><span className="story-location"><MapPin size={13} />{story.location}</span></div><div className="p-5 sm:p-6"><p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">{story.eyebrow}</p><h3 className="mt-3 font-display text-2xl font-medium leading-tight tracking-[-0.035em] text-[#152238]">{story.title}</h3><p className="mt-3 text-sm leading-6 text-slate-500">{story.description}</p><div className="mt-6 flex items-center justify-between"><span className="flex items-center gap-1.5 text-xs font-semibold text-slate-400"><Play size={12} fill="currentColor" /> {story.time} lesen</span><button className="read-button">Entdecken <ExternalLink size={14} /></button></div></div></article>;
 }
 
 const pinColors: Record<string, string> = { restaurant: '#ec4b45', sight: '#3272c8', activity: '#55a676' };
